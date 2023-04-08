@@ -1,0 +1,30 @@
+@import './_variables.scss';
+@import './libs/normalize.scss';
+@import './_sidebar.scss';
+@import './main.scss';
+body{
+    font-family: 'Poppins Medium', sans-serif;
+}
+.wrapper {
+    width: calc(100vw - 100px);
+    background-color: #fff;
+    display: flex;
+    margin: 0 auto;
+    max-height: 1198px;
+    border-radius: 10px;
+    max-width: 1440px;
+  
+    @media (max-width: 829px) {
+        flex-direction: column;
+        padding-bottom: 200px;
+      width: calc(100vw - 30px);
+      margin-top: 15px;
+    }
+  }
+  .content{
+    display: flex;
+  }
+// .container {
+//   width: $container-width;
+//   margin: 0 auto;
+// }

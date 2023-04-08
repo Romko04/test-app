@@ -1,0 +1,181 @@
+@import './font.scss';
+
+.sidebar {
+    padding-top: 35px;
+    &__menu{
+        padding-right: 28px;
+    }
+    &__logo {
+        display: flex;
+        align-items: center;
+        margin-bottom: 64px;
+    }
+
+    &__logo-img {
+        margin-right: 8px;
+    }
+
+    &__logo-title {
+        position: relative;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 26px;
+        line-height: 39px;
+        letter-spacing: 0.01em;
+        color: $black;
+        padding-right: 22px;
+    }
+
+    &__logo-title::after {
+        position: absolute;
+        right: 0;
+        content: 'v.01';
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 15px;
+        bottom: 6px;
+        color: $grey;
+        /* identical to box height */
+
+        letter-spacing: -0.01em;
+    }
+
+    &__menu-item {
+        cursor: pointer;
+        width: 250px;
+        position: relative;
+        margin-bottom: 29px;
+        display: flex;
+        height: 46px;
+        align-items: center;
+        padding: 11px;
+        border-radius: 8px;
+    }
+
+    &__menu-item:last-child {
+        margin-bottom: 0px;
+    }
+
+    &__menu-item::after {
+        content: url('../assets/img/navArrow.svg');
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        right: 0;
+        top: 11px;
+    }
+
+    &__menu-item-link {
+        margin-left: 14px;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+        letter-spacing: -0.01em;
+    }
+
+    &__menu-item--active {
+
+        color: #fff;
+        background: #5932EA;
+    }
+
+    &__menu-item--active &__menu-item-link {
+        color: #fff;
+    }
+
+    &__nav-profile {
+        margin-top: 577px;
+        margin-bottom: 84px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__nav-profile-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__nav-profile--img {
+        margin-right: 12px;
+    }
+
+    &__nav-profile-name {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+        /* identical to box height */
+        color: $black;
+        letter-spacing: 0.01em;
+    }
+
+    &__nav-profile-post {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        /* identical to box height */
+        color: $grey;
+        letter-spacing: 0.01em;
+    }
+
+}
+@media screen and (max-width: 829px) {
+    .sidebar {
+        display: flex;
+        margin-bottom: 15px;
+        justify-content: space-between;
+        align-items: center;
+        &__nav{
+            background-color: #fff;
+            z-index: 1;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        &__menu{
+            display: flex;
+
+            justify-content: space-between;
+        }
+        &__menu-item-link{
+            display: none;
+        }
+        .sidebar__menu-item {
+            cursor: pointer;
+            width: 50px;
+            position: relative;
+            margin-bottom: 10px;
+            display: flex;
+            height: 46px;
+            align-items: center;
+            padding: 11px;
+            border-radius: 8px;
+        }
+        &__menu-item::after {
+            content: ''
+        }
+        &__nav-profile{
+            margin: 0;
+        }
+        &__logo{
+            margin: 0;
+        }
+        &__logo-title{
+            display: none;
+        }
+        &__nav-profile-content{
+            display: none;
+        }
+
+    }
+  }
