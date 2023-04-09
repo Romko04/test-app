@@ -150,6 +150,9 @@
         &__menu-item-link{
             display: none;
         }
+        &__menu {
+            padding: 0;
+        }
         .sidebar__menu-item {
             cursor: pointer;
             width: 50px;
