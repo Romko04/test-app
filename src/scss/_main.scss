@@ -4,6 +4,7 @@
     background-color: $background--main;
     width: 100%;
     padding-left: 71px;
+
     &__title {
         font-family: 'Poppins';
         font-style: normal;
@@ -22,6 +23,7 @@
     box-shadow: 0px 10px 60px rgba(226, 236, 249, 0.5);
     border-radius: 30px;
     position: relative;
+
     &__filtering {
         display: flex;
         justify-content: space-between;
@@ -92,6 +94,9 @@
         font-family: 'Poppins';
         font-style: normal;
         font-weight: 600;
+        width: 80px;
+        padding-right: 15px;
+        white-space: nowrap;
         font-size: 22px;
         line-height: 33px;
         /* identical to box height */
@@ -115,82 +120,107 @@
 
         color: #B5B7C0;
     }
-}
 
-.customers__table {
-    width: 100%;
-    text-align: left;
-    border-collapse: collapse;
-}
-
-.customers__table-header {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 21px;
-    /* identical to box height */
-
-    letter-spacing: -0.01em;
-
-    color: #B5B7C0;
-}
-.customers__table-header::after{
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 166px;
-    border-bottom: 1px solid #EEEEEE;
-}
-
-.customers__table-data {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 21px;
-    /* identical to box height */
-
-    letter-spacing: -0.01em;
-    padding: 34px 0 24px 0;
-    color: #292D32;
-    border-bottom: 1px solid #EEEEEE;
-}
-
-.customers__table-header {
-    font-weight: bold;
-}
-.customers__table-data--active{
-    background: rgba(22, 192, 152, 0.38);
-    color: #008767;
-    padding: 4px 18px;
-    border: 1px solid #00B087;
-    border-radius: 4px;
-}
-.customers__table-container{
-    overflow-x: auto;
-}
-.customers__table {
-    overflow-x: scroll;
-  }
-  .customers__table-header,
-    .customers__table-data {
-        padding-right: 15px;
-      white-space: nowrap;
-      min-width: 100px;
+    &__table-container {
+        overflow-x: auto;
     }
+
+    &__table {
+        width: 100%;
+        text-align: left;
+        border-collapse: collapse;
+    }
+
+    &__table-header {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+        /* identical to box height */
+
+        letter-spacing: -0.01em;
+
+        color: #B5B7C0;
+    }
+
+    &__table-header::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 166px;
+        border-bottom: 1px solid #EEEEEE;
+    }
+    &__table-data-status{
+        width: 80px;
+    }
+    &__table-data {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+        /* identical to box height */
+
+        letter-spacing: -0.01em;
+        padding: 34px 0 24px 0;
+        color: #292D32;
+        border-bottom: 1px solid #EEEEEE;
+    }
+    &__table-data-status{
+        border-bottom: 1px solid #EEEEEE;
+    }
+    &__table-data--active {
+        background: rgba(22, 192, 152, 0.38);
+        width: 80px;
+        display: block;
+        /* width: 80px; */
+        text-align: center;
+        color: #008767;
+        padding: 4px 18px;
+        border: 1px solid #00B087;
+        border-radius: 4px;
+    }
+    &__table-data--inActive{
+        width: 80px;
+        height: 29px;
+        padding: 4px 12px;
+        background: #FFC5C5;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+        /* identical to box height */
+        letter-spacing: -0.01em;
+        color: #DF0404;
+        border: 1px solid #DF0404;
+        border-radius: 4px;
+    }
+
+    &__table-header,
+    &__table-data {
+        padding-right: 15px;
+        white-space: nowrap;
+        min-width: 100px;
+    }
+}
+
 @media screen and (max-width: 829px) {
-    .main{
+    .main {
         padding: 0;
-        &__title{
+
+        &__title {
             margin: 15px;
         }
     }
-    .customers__input-container{
+
+    .customers__input-container {
         margin-top: 15px;
     }
-    .customers__filtering{
+
+    .customers__filtering {
         flex-direction: column;
     }
-  }
+}
